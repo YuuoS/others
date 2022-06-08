@@ -1,11 +1,11 @@
 import csv
 
 def main():
-    base64_file_path = '/Users/yuki/Desktop/base64.txt'
-    output_file_path = '/Users/yuki/Desktop/output_01.txt'
+    base64_file_path = './base64.txt'
+    output_file_path = './output_01.txt'
     output_file = open(output_file_path, 'wt')
 
-    with open('/Users/yuki/Desktop/dict.csv', mode='r', encoding = "utf-8-sig") as inp:
+    with open('./dict.csv', mode='r', encoding = "utf-8-sig") as inp:
         reader = csv.reader(inp)
         dict_from_csv = {rows[0]:rows[1] for rows in reader}
 
@@ -16,7 +16,6 @@ def main():
 
     for ch in content:
         if ch != '\n':
-
             try:
                 val = dict_from_csv[ch]
                 print(f'{ch}: {val}')

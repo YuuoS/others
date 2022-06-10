@@ -15,7 +15,7 @@ def main():
         content = f.read()
 
     for ch in content:
-        if ch != '\n':
+        if ch != '\n' and ch != '=':
             try:
                 val = dict_from_csv[ch]
                 print(f'{ch}: {val}')
@@ -23,7 +23,7 @@ def main():
             except KeyError:
                 print(f'{ch}: Key error')
 
-    output_file.close()
+    # output_file.close()
 
 if __name__ == '__main__':
     main()

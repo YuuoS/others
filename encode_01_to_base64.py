@@ -4,7 +4,7 @@ import numpy as np
 
 
 def main():
-    input_file = "/Users/yuki/Desktop/output_01.txt"
+    input_file = "./edited01.txt"
     with open(input_file, "r") as file:
         read_file = file.read()
     file.close()

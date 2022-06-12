@@ -1,11 +1,11 @@
 import csv
 
 def main():
-    base64_file_path = './base64.txt'
-    output_file_path = './output_01.txt'
+    base64_file_path = 'base64.txt'
+    output_file_path = 'output_01.txt'
     output_file = open(output_file_path, 'wt')
 
-    with open('./dict.csv', mode='r', encoding = "utf-8-sig") as inp:
+    with open('dict.csv', mode='r', encoding ="utf-8-sig") as inp:
         reader = csv.reader(inp)
         dict_from_csv = {rows[0]:rows[1] for rows in reader}
 

@@ -4,7 +4,7 @@ import numpy as np
 
 
 def main():
-    input_file = "./edited01.txt"
+    input_file = "edited01.txt"
     with open(input_file, "r") as file:
         read_file = file.read()
     file.close()
@@ -14,7 +14,7 @@ def main():
     new_list = re.split('(......)', contents)[1::2]
     print(np.array(new_list))
 
-    with open('./dict.csv', mode='r', encoding="utf-8-sig") as inp:
+    with open('dict.csv', mode='r', encoding="utf-8-sig") as inp:
         reader = csv.reader(inp)
         dict_from_csv = {rows[0]: rows[1] for rows in reader}
 
@@ -24,7 +24,7 @@ def main():
     print(dict_from_csv_swapped)
 
 
-    output_file_path = './output_base64.txt'
+    output_file_path = 'output_base64.txt'
     output_file = open(output_file_path, 'wt')
 
     for ch in new_list:
